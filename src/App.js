@@ -1,64 +1,69 @@
 import React, { Component } from 'react'
 import { BrowserRouter as R,Route,Link } from 'react-router-dom'
-import './style.css'
 import Home from './components/Home/Home';
 import Travel from './components/Travel/Travel';
 import Food from './components/Food/Food';
 import Style from './components/style/Style';
+import Hostel from './components/Hostel/Hostel';
+import About from './components/About/About';
+import './style.css'
+
 class App extends Component {
+  
   openNav = () => {
     document.getElementById("mySidenav").style.width = "50%";
     document.getElementById("main").style.marginLeft = "250px";
   }
+  
   closeNav =()=> {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
   }
+  
   render(){
     return (
       <R>
         <div className="container-fluid" >
-         <nav className="navbar navbar-expand fixed-top mt-5 pt-5" >
-          <ul className="navbar-nav" >
-            <div id="main">
-                <span style={{fontSize:"30px",cursor:"pointer"}}  onClick={this.openNav} >&#9776;</span>
-            </div>
-          </ul>
-          <ul className="navbar-nav navbar-logo mx-auto" >
-            <Link  to="/" className="nav-item nav-link text-dark" style={{fontSize:"20px"}} ><u className="p-2" >Skye</u></Link>
-          </ul>
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a href="http://instagram.com/squarespace" target="_blank" rel="noopener noreferrer" className="nav-link">
-                <img width="20px" src="https://image.flaticon.com/icons/png/128/174/174855.png" alt="instragram"/>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/squarespace" className="nav-link">
-                <img src="https://image.flaticon.com/icons/svg/174/174876.svg" alt="twitter" width="30px" /> 
-              </a>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/search" >
-                <img src="https://www.flaticon.com/premium-icon/icons/svg/1872/1872535.svg" alt="search" width="30px" />
-              </Link>
-            </li>
-          </ul>    
-        </nav>
-        <div id="mySidenav" className="sidenav ">
+          <nav className="navbar navbar-expand fixed-top mt-5 pt-5" >
+            <ul className="navbar-nav" >
+              <div id="main">
+                  <span style={{fontSize:"30px",cursor:"pointer"}}  onClick={this.openNav} >&#9776;</span>
+              </div>
+            </ul>
+            <ul className="navbar-nav navbar-logo mx-auto" >
+              <Link  to="/" className="nav-item nav-link text-dark" style={{fontSize:"20px"}} ><u className="p-2" >Skye</u></Link>
+            </ul>
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a href="http://instagram.com/squarespace" target="_blank" rel="noopener noreferrer" className="nav-link">
+                  <img width="20px" src="https://image.flaticon.com/icons/png/128/174/174855.png" alt="instragram"/>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/squarespace" className="nav-link">
+                  <img src="https://image.flaticon.com/icons/svg/174/174876.svg" alt="twitter" width="30px" /> 
+                </a>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/search" >
+                  <img src="https://www.flaticon.com/premium-icon/icons/svg/1872/1872535.svg" alt="search" width="30px" />
+                </Link>
+              </li>
+            </ul>    
+          </nav>
+          <div id="mySidenav" className="sidenav ">
             <div className="row">
               <div className="col col-sm-4 col-md-4 col-xl-4 col-xl-4">
                 <div className="pt-5 mt-5">
                   <p className="pt-5" ></p>
-                <Link to="/" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center" >Home</Link>
-                <Link to="/travel" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Travel</Link>
-                <Link to="/foodDrink" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Food & Drink</Link>
-                <Link to="/style" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Style</Link>
-                <Link to="/hostel" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Hostel</Link>
-                <Link to="/diary" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Diary</Link>
-                <Link to="/about" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >About</Link>
-                <Link to="/contact" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Contact</Link>
-              </div>
+                  <Link to="/" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center" >Home</Link>
+                  <Link to="/travel" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Travel</Link>
+                  <Link to="/foodDrink" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Food & Drink</Link>
+                  <Link to="/style" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Style</Link>
+                  <Link to="/hostel" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Hostel</Link>
+                  <Link to="/about" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >About</Link>
+                  <Link to="/contact" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Contact</Link>
+                </div>
               </div>
               <div className="col col-sm-8 col-md-8 col-xl-8 col-xl-8">
                 <div className="p-3 m-3  text-center " >
@@ -73,13 +78,15 @@ class App extends Component {
               </div>
             </div>
             <p className="closebtn"  onClick={this.closeNav}>&times;</p>
+          </div>
+          <Route  exact path="/" component={Home} />
+          <Route  path="/travel" component={Travel} />
+          <Route  path="/foodDrink" component={Food} />
+          <Route  path="/style" component={Style} />
+          <Route  path="/hostel" component={Hostel} />
+          <Route  path="/about"  component={About} /> 
         </div>
-        <Route  exact path="/" component={Home} />
-        <Route  path="/travel" component={Travel} />
-        <Route  path="/foodDrink" component={Food} />
-        <Route  path="/style" component={Style} />
-      </div>
-    </R>
+      </R>
     )
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
-const DataList =(props)=> {
-  const { image ,date, about , category } = props.home
+const HostelList = (props) => {
+  const { image ,date, about , category } = props.hostel
   return (
     <div className="col col-sm-3 col-md-3 col-xl-3 col-lg-3 pt-5 mt-5" >
       <img src={image}  alt="avatar" className="image-rounded   mt-5 pt-3 " width="100%" height="80%"  />
@@ -11,4 +11,5 @@ const DataList =(props)=> {
     </div>
   )
 }
-export default DataList
+
+export default HostelList
