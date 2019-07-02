@@ -58,13 +58,13 @@ class App extends Component {
               <div className="col col-sm-4 col-md-4 col-xl-4 col-xl-4">
                 <div className="pt-5 mt-5">
                   <p className="pt-5" ></p>
-                  <Link to="/" style={{fontSize:"35px"}} className=" nav-item nav-link text-dark pr-5 font-weight-bold text-center" >Home</Link>
-                  <Link to="/travel" style={{fontSize:"35px"}} className=" nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Travel</Link>
-                  <Link to="/foodDrink" style={{fontSize:"35px"}} className=" nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Food & Drink</Link>
-                  <Link to="/style" style={{fontSize:"35px"}} className=" nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Style</Link>
-                  <Link to="/hostel" style={{fontSize:"35px"}} className=" nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Hostel</Link>
-                  <Link to="/about" style={{fontSize:"35px"}} className=" nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >About</Link>
-                  <Link to="/contact" style={{fontSize:"35px"}} className=" nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Contact</Link>
+                  <Link to="/" style={{fontSize:"35px"}} className=" text-danger  nav-item nav-link text-dark pr-5 font-weight-bold text-center" >Home</Link>
+                  <Link to="/travel" style={{fontSize:"35px"}} className=" text-danger  nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Travel</Link>
+                  <Link to="/foodDrink" style={{fontSize:"35px"}} className=" text-danger  nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Food & Drink</Link>
+                  <Link to="/style" style={{fontSize:"35px"}} className=" text-danger  nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Style</Link>
+                  <Link to="/hostel" style={{fontSize:"35px"}} className=" text-danger  nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Hostel</Link>
+                  <Link to="/about" style={{fontSize:"35px"}} className=" text-danger  nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >About</Link>
+                  <Link to="/contact" style={{fontSize:"35px"}} className=" text-danger  nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Contact</Link>
                 </div>
               </div>
               <div className="col col-sm-8 col-md-8 col-xl-8 col-xl-8">

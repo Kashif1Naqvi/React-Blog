@@ -7,7 +7,7 @@ const  Contact =()=> {
           <div className="pt-3 mt-3  ">
             <h1>Contact</h1>
             <p>Email me for press/media inquiries and other collaborations.</p>
-            <a href="gmail.com" target="_blank" className="text-danger" >template.placeholder@gmail.com</a>
+            <a href="https://mail.google.com/mail/u/0/#inbox" rel="noopener noreferrer" target="_blank" className="text-danger" >template.placeholder@gmail.com</a>
           </div>
         </div>
     </div>
