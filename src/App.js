@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import { BrowserRouter as R,Route,Link } from 'react-router-dom'
 import './style.css'
+import Home from './components/Home/Home';
+import Travel from './components/Travel/Travel';
+import Food from './components/Food/Food';
+import Style from './components/style/Style';
 class App extends Component {
   openNav = () => {
     document.getElementById("mySidenav").style.width = "50%";
     document.getElementById("main").style.marginLeft = "250px";
   }
-  
   closeNav =()=> {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
@@ -14,36 +17,12 @@ class App extends Component {
   render(){
     return (
       <R>
-        <div className="container" >
-         <div id="mySidenav" className="sidenav">
-            <div className="row">
-              <div className="col col-sm-4 col-md-4 col-xl-4 col-xl-4 ">
-                <Link to="/" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Home</Link>
-                <Link to="/travel" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Travel</Link>
-                <Link to="/foodDrink" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Food & Drink</Link>
-                <Link to="/style" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Style</Link>
-                <Link to="/hostel" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Hostel</Link>
-                <Link to="/diary" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Diary</Link>
-                <Link to="/about" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >About</Link>
-                <Link to="/contact" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Contact</Link>
-              </div>
-              <div className="col col-sm-8 col-md-8 col-xl-8 col-xl-8">
-                <div className="p-3 m-3  text-center " >
-                  <figure className="figure">
-                    <img className="figure-image rounded-circle "  src="https://static1.squarespace.com/static/55491642e4b0cb0b033d590e/t/56ba424320c6479e7f780c8f/1456168353372/?format=300w" alt=""/>
-                  </figure>
-                  <h1 className="mb-4 font-weight-bold" >Hi</h1>
-                  <p  className="mb-3 " >Welcome to my blog. I document my adventures in travel, style, and food. Hope you have a nice stay!</p>
-                  <a href="http://instagram.com/squarespace"> <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/df/1e/2f/df1e2f1d-903b-864a-d606-4b0c61b9988d/Prod-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-6.png/246x0w.jpg" alt="Instragram" width="25px" />  </a>
-                  <a href="https://twitter.com/squarespace"> <img src="https://image.flaticon.com/icons/png/512/23/23931.png" alt="Twitter" width="25px" /> </a>
-                </div>
-              </div>
-            </div>
-            <Link to={e => e.preventDefault() } className="closebtn" onClick={this.closeNav}>&times;</Link>
-        </div>
-        <nav className="navbar navbar-expand mt-3 pt-3" >
+        <div className="container-fluid" >
+         <nav className="navbar navbar-expand fixed-top mt-5 pt-5" >
           <ul className="navbar-nav" >
-            <span style={{fontSize:"30px",cursor:"pointer"}} id="main" onClick={this.openNav} >&#9776;</span>
+            <div id="main">
+                <span style={{fontSize:"30px",cursor:"pointer"}}  onClick={this.openNav} >&#9776;</span>
+            </div>
           </ul>
           <ul className="navbar-nav navbar-logo mx-auto" >
             <Link  to="/" className="nav-item nav-link text-dark" style={{fontSize:"20px"}} ><u className="p-2" >Skye</u></Link>
@@ -66,6 +45,39 @@ class App extends Component {
             </li>
           </ul>    
         </nav>
+        <div id="mySidenav" className="sidenav ">
+            <div className="row">
+              <div className="col col-sm-4 col-md-4 col-xl-4 col-xl-4">
+                <div className="pt-5 mt-5">
+                  <p className="pt-5" ></p>
+                <Link to="/" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center" >Home</Link>
+                <Link to="/travel" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Travel</Link>
+                <Link to="/foodDrink" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Food & Drink</Link>
+                <Link to="/style" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Style</Link>
+                <Link to="/hostel" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Hostel</Link>
+                <Link to="/diary" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Diary</Link>
+                <Link to="/about" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >About</Link>
+                <Link to="/contact" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Contact</Link>
+              </div>
+              </div>
+              <div className="col col-sm-8 col-md-8 col-xl-8 col-xl-8">
+                <div className="p-3 m-3  text-center " >
+                  <figure className="figure">
+                    <img className="figure-image rounded-circle "  src="https://static1.squarespace.com/static/55491642e4b0cb0b033d590e/t/56ba424320c6479e7f780c8f/1456168353372/?format=300w" alt=""/>
+                  </figure>
+                  <h1 className="mb-4 font-weight-bold" >Hi</h1>
+                  <p  className="mb-3 " >Welcome to my blog. I document my adventures in travel, style, and food. Hope you have a nice stay!</p>
+                  <a href="http://instagram.com/squarespace"> <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/df/1e/2f/df1e2f1d-903b-864a-d606-4b0c61b9988d/Prod-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-6.png/246x0w.jpg" alt="Instragram" width="25px" />  </a>
+                  <a href="https://twitter.com/squarespace"> <img src="https://image.flaticon.com/icons/png/512/23/23931.png" alt="Twitter" width="25px" /> </a>
+                </div>
+              </div>
+            </div>
+            <p className="closebtn"  onClick={this.closeNav}>&times;</p>
+        </div>
+        <Route  exact path="/" component={Home} />
+        <Route  path="/travel" component={Travel} />
+        <Route  path="/foodDrink" component={Food} />
+        <Route  path="/style" component={Style} />
       </div>
     </R>
     )
