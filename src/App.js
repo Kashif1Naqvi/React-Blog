@@ -14,46 +14,60 @@ class App extends Component {
   render(){
     return (
       <R>
-        <div className="container-fluid" >
-          <div id="mySidenav" className="sidenav">
-          <a href={e => e.preventDefault() } class="closebtn" onClick={this.closeNav}>&times;</a>
+        <div className="container" >
+         <div id="mySidenav" className="sidenav">
             <div className="row">
-                <div className="col">
-                    <Link className="nav-item nav-link" >Home</Link>
-                    <Link className="nav-item nav-link" >Travel</Link>
-                    <Link className="nav-item nav-link" >Food & Drink</Link>
-                    <Link className="nav-item nav-link" >Style</Link>
-                    <Link className="nav-item nav-link" >Hostel</Link>
-                    <Link className="nav-item nav-link" >Diary</Link>
-                    <Link className="nav-item nav-link" >About</Link>
-                    <Link className="nav-item nav-link" >Contact</Link>
+              <div className="col col-sm-4 col-md-4 col-xl-4 col-xl-4 ">
+                <Link to="/" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Home</Link>
+                <Link to="/travel" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Travel</Link>
+                <Link to="/foodDrink" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Food & Drink</Link>
+                <Link to="/style" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Style</Link>
+                <Link to="/hostel" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Hostel</Link>
+                <Link to="/diary" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Diary</Link>
+                <Link to="/about" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >About</Link>
+                <Link to="/contact" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Contact</Link>
+              </div>
+              <div className="col col-sm-8 col-md-8 col-xl-8 col-xl-8">
+                <div className="p-3 m-3  text-center " >
+                  <figure className="figure">
+                    <img className="figure-image rounded-circle "  src="https://static1.squarespace.com/static/55491642e4b0cb0b033d590e/t/56ba424320c6479e7f780c8f/1456168353372/?format=300w" alt=""/>
+                  </figure>
+                  <h1 className="mb-4 font-weight-bold" >Hi</h1>
+                  <p  className="mb-3 " >Welcome to my blog. I document my adventures in travel, style, and food. Hope you have a nice stay!</p>
+                  <a href="http://instagram.com/squarespace"> <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/df/1e/2f/df1e2f1d-903b-864a-d606-4b0c61b9988d/Prod-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-6.png/246x0w.jpg" alt="Instragram" width="25px" />  </a>
+                  <a href="https://twitter.com/squarespace"> <img src="https://image.flaticon.com/icons/png/512/23/23931.png" alt="Twitter" width="25px" /> </a>
                 </div>
-                <div className="col">
-                  
-                    <Link>c</Link>
-                  
-                  <li>
-                    <Link>c</Link>
-                  </li>
-                  <li>
-                    <Link>c</Link>
-                  </li>
-                  <li>
-                    <Link>c</Link>
-                  </li>
-                  <li>
-                    <Link>c</Link>
-                  </li>
-                </div>
+              </div>
             </div>
-          </div>
-
-        <div id="main">
-        <span style={{fontSize:"30px",cursor:"pointer"}} onClick={this.openNav} >&#9776;</span>
+            <Link to={e => e.preventDefault() } className="closebtn" onClick={this.closeNav}>&times;</Link>
         </div>
-          
-        </div>
-      </R>
+        <nav className="navbar navbar-expand mt-3 pt-3" >
+          <ul className="navbar-nav" >
+            <span style={{fontSize:"30px",cursor:"pointer"}} id="main" onClick={this.openNav} >&#9776;</span>
+          </ul>
+          <ul className="navbar-nav navbar-logo mx-auto" >
+            <Link  to="/" className="nav-item nav-link text-dark" style={{fontSize:"20px"}} ><u className="p-2" >Skye</u></Link>
+          </ul>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a href="http://instagram.com/squarespace" target="_blank" rel="noopener noreferrer" className="nav-link">
+                <img width="20px" src="https://image.flaticon.com/icons/png/128/174/174855.png" alt="instragram"/>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/squarespace" className="nav-link">
+                <img src="https://image.flaticon.com/icons/svg/174/174876.svg" alt="twitter" width="30px" /> 
+              </a>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/search" >
+                <img src="https://www.flaticon.com/premium-icon/icons/svg/1872/1872535.svg" alt="search" width="30px" />
+              </Link>
+            </li>
+          </ul>    
+        </nav>
+      </div>
+    </R>
     )
   }
 }
