@@ -21,7 +21,7 @@ const About = () => {
         </div>
         <div className="col col-sm-7 col-xl-7 col-lg-7 col-md-7">
           <p className="pt-5 pb-3 mb-3 mt-5" >I’m a Stockholm native working in Dublin, Ireland as a software developer. Basically, I can code from anywhere, so I spend as much time as I can traveling. Most of my wanderlust centers around food and fashion, but you’ll find a lot of reflections in my “Diary” too</p>
-          <p className="pb-5 mb-8" >I hope this blog inspires you to explore new places. Feel free to leave a comment or follow me on social media!</p>
+          <p className="" >I hope this blog inspires you to explore new places. Feel free to leave a comment or follow me on social media!</p>
         </div>
       </div>
     </div>

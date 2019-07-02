@@ -7,6 +7,8 @@ import Style from './components/style/Style';
 import Hostel from './components/Hostel/Hostel';
 import About from './components/About/About';
 import './style.css'
+import Footer from './Footer';
+import Contact from './components/Contact/Contact';
 
 class App extends Component {
   
@@ -56,13 +58,13 @@ class App extends Component {
               <div className="col col-sm-4 col-md-4 col-xl-4 col-xl-4">
                 <div className="pt-5 mt-5">
                   <p className="pt-5" ></p>
-                  <Link to="/" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center" >Home</Link>
-                  <Link to="/travel" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Travel</Link>
-                  <Link to="/foodDrink" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Food & Drink</Link>
-                  <Link to="/style" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Style</Link>
-                  <Link to="/hostel" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Hostel</Link>
-                  <Link to="/about" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >About</Link>
-                  <Link to="/contact" className="nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Contact</Link>
+                  <Link to="/" style={{fontSize:"35px"}} className=" nav-item nav-link text-dark pr-5 font-weight-bold text-center" >Home</Link>
+                  <Link to="/travel" style={{fontSize:"35px"}} className=" nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Travel</Link>
+                  <Link to="/foodDrink" style={{fontSize:"35px"}} className=" nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Food & Drink</Link>
+                  <Link to="/style" style={{fontSize:"35px"}} className=" nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Style</Link>
+                  <Link to="/hostel" style={{fontSize:"35px"}} className=" nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Hostel</Link>
+                  <Link to="/about" style={{fontSize:"35px"}} className=" nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >About</Link>
+                  <Link to="/contact" style={{fontSize:"35px"}} className=" nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Contact</Link>
                 </div>
               </div>
               <div className="col col-sm-8 col-md-8 col-xl-8 col-xl-8">
@@ -85,6 +87,10 @@ class App extends Component {
           <Route  path="/style" component={Style} />
           <Route  path="/hostel" component={Hostel} />
           <Route  path="/about"  component={About} /> 
+          <Route  path="/contact" component={Contact} />
+           <span className="p-5 m-5" ></span>
+           <br/><br/><br/><hr />
+          <Footer />
         </div>
       </R>
     )

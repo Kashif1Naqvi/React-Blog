@@ -4,7 +4,7 @@ import FoodList from './FoodList'
 const Food = () => {
   const food = foodObj.food.map((food)=><FoodList  food={food} key={food.id} />) 
   return (
-    <div className="mt-5 pt-5  "> 
+    <div className="mt-5 pt-5"> 
       <div className="row">
         {food}
       </div>

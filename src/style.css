@@ -25,7 +25,7 @@ body {
   }
   
   .sidenav Link:hover {
-    color: #f1f1f1;
+    color:red;
   }
   
   .sidenav .closebtn {
