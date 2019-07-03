@@ -58,7 +58,7 @@ class App extends Component {
               <div className="col col-sm-4 col-md-4 col-xl-4 col-xl-4">
                 <div className="pt-5 mt-5">
                   <p className="pt-5" ></p>
-                  <Link to="/" style={{fontSize:"35px"}} className=" text-danger  nav-item nav-link text-dark pr-5 font-weight-bold text-center" >Home</Link>
+                  <a href="/" style={{fontSize:"35px"}} className=" text-danger  nav-item nav-link text-dark pr-5 font-weight-bold text-center" >Home</a>
                   <Link to="/travel" style={{fontSize:"35px"}} className=" text-danger  nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Travel</Link>
                   <Link to="/foodDrink" style={{fontSize:"35px"}} className=" text-danger  nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Food & Drink</Link>
                   <Link to="/style" style={{fontSize:"35px"}} className=" text-danger  nav-item nav-link text-dark pr-5 font-weight-bold text-center  " >Style</Link>
