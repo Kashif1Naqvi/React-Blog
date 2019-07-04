@@ -6,7 +6,6 @@ class FoodList extends Component{
   } 
   render(){
     const { image ,date, about , category } = this.props.food
-    console.log(this.props.path)
     return (
       <div className="col col-sm-3 col-md-3 col-xl-3 col-lg-3 pt-5 mt-5" >
         <Link to={`${this.props.path}/${category}`} >
