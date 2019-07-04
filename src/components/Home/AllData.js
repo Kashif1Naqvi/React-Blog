@@ -1,7 +1,9 @@
 import React,{Component} from 'react'
+import Comments from './Comments';
 class AllData extends Component{
   render(){
-    const {image1,image2 ,image3,image4,image5,title,image7,about,socailHeading,link,image8,image9,image10,image11,tags} = this.props
+    const {image1,image2 ,image3,image4,image5,title,image7,about,socailHeading,link,image8,image9,image10,image11,tags,} = this.props
+    console.log(this.props)
     return(
       <div className="row"> 
         <div className="col col-sm-9 col-md-9 col-xl-9 col-lg-9 ">
@@ -22,9 +24,11 @@ class AllData extends Component{
           <p className="text-muted">Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit justo sit amet risus.</p>
           <div className="text-center" >
             {
-              tags.map((tag)=>{return <a className="text-center text-muted"  href="/" >{tag}</a> })
+              tags.map((tag,index)=>{return <a key={index} className="text-center text-muted"  href="/" >{tag}</a> })
             }
           </div>
+          <hr />
+          <Comments />
         </div>
         <div className="col col-sm-3 col-md-3 col-xl-3 col-lg-3 ">
           <h1 className="text-muted display-1 pb-1 mb-1 font-weight-bold " style={{fontSize:"30px"}} >{title}</h1>

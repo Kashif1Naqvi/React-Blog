@@ -1,8 +1,11 @@
 import React from 'react'
 import AllData from './AllData'
-
+import AllPosts from './AllPosts'
 const FullArticle = (props) =>{
-  const { image,date,about,category ,fullData } = props.article
+  const { image,date,about,category ,fullData,Related_Posts } = props.article
+
+  const posts = Related_Posts.map((post,index)=><AllPosts {...post} key={index}  />)
+
   const data = fullData.map((data,index)=><AllData  {...data} key={index}  />)
   return (
     <div className="container pt-5 mt-5" >
@@ -44,6 +47,10 @@ const FullArticle = (props) =>{
       </div>
         <div className="pt-5 mt-5" >
           {data}  
+        </div>
+        
+        <div className="row pt-5 mt-5" >
+          {posts}  
         </div>
     </div>
   )
