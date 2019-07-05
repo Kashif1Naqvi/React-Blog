@@ -62,7 +62,7 @@ class App extends Component {
               </li>
             </ul>    
           </nav>
-          <div style={{width}} className="sidenav ">
+          <div style={{width}} className="sidenav  ">
             <div className="row">
               <div className="col col-sm-4 col-md-4 col-xl-4 col-lg-4">
                 <div className="pt-5 mt-5">

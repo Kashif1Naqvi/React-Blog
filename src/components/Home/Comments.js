@@ -25,7 +25,7 @@ class Comments extends Component {
   render() {
     return (
       <div>
-        <button className="text-danger" onClick={this.handleShow} >Leave a Commnet</button>
+        <button className="text-danger btn btn-default " onClick={this.handleShow} >Leave a Commnet</button>
         {
          !this.state.show ? "":
           <form className="form">
