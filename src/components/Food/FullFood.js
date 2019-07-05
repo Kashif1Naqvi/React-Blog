@@ -45,10 +45,11 @@ const FullFood = (props) =>{
                 <button className="btn btn-default  text-white bg-dark btn-large pl-4 pr-4  pb-3 pt-3 " >Sign Up</button>
           </div>
       </div>
+        
         <div className="pt-5 mt-5" >
           {data}  
         </div>
-        
+        <h1 className="text-muted" >Ralitive posts</h1>
         <div className="row pt-5 mt-5" >
           {posts}  
         </div>

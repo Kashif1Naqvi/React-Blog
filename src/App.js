@@ -97,7 +97,7 @@ class App extends Component {
           <Route  path="/hostel" component={Hostel} />
           <Route  path="/about"  component={About} /> 
           <Route  path="/contact" component={Contact} />
-           <span className="p-5 m-5" ></span>
+           <span className="pb-5 mb-5" ></span>
            <br/><br/><br/><hr />
           <Footer />
         </div>

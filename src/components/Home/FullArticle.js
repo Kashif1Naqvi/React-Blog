@@ -48,7 +48,7 @@ const FullArticle = (props) =>{
         <div className="pt-5 mt-5" >
           {data}  
         </div>
-        
+        <h1 className="text-muted" >Ralitive posts</h1>
         <div className="row pt-5 mt-5" >
           {posts}  
         </div>
