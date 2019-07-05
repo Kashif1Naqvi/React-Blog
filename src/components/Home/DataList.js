@@ -7,7 +7,7 @@ class DataList extends Component {
   render() {
     const { image ,date, about , category } = this.props.home
     return (
-      <div className="col col-sm-3 col-md-3 col-xl-3 col-lg-3 pt-5 mt-5" >
+      <div className="col col-sm-4 col-md-4 col-xl-4 col-lg-4 pt-5 mt-5" >
         <Link to={`${this.props.path}`}>
           <img src={image} onClick={()=>this.handleData(this.props.home) } alt="avatar" className="image-rounded   mt-5 pt-3 " width="100%" height="80%"  />
         </Link>

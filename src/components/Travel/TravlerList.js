@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
+
 class TravlerList extends Component {
   handleTravel = (data) => {
     this.props.article(data)

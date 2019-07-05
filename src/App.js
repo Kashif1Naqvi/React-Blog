@@ -11,25 +11,34 @@ import Footer from './Footer';
 import Contact from './components/Contact/Contact';
 
 class App extends Component {
-  
-  openNav = () => {
-    document.getElementById("mySidenav").style.width = "50%";
-    document.getElementById("main").style.marginLeft = "250px";
+  constructor(props){
+    super(props)
+    this.state = {
+      width:"0px"
+    }
   }
-  
-  closeNav =()=> {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
+
+  handleNav = () => {
+    this.setState({
+      width:"50%"
+    })
+  }
+
+  closeNav = () => {
+    this.setState({
+      width:"0px"
+    })
   }
   
   render(){
+    const width = this.state.width
     return (
       <R>
         <div className="container-fluid" >
           <nav className="navbar navbar-expand fixed-top mt-5 pt-5" >
             <ul className="navbar-nav" >
               <div id="main">
-                  <span style={{fontSize:"30px",cursor:"pointer"}}  onClick={this.openNav} >&#9776;</span>
+                  <span style={{fontSize:"30px",cursor:"pointer"}}  onClick={this.handleNav} >&#9776;</span>
               </div>
             </ul>
             <ul className="navbar-nav navbar-logo mx-auto" >
@@ -53,9 +62,9 @@ class App extends Component {
               </li>
             </ul>    
           </nav>
-          <div id="mySidenav" className="sidenav ">
+          <div style={{width}} className="sidenav ">
             <div className="row">
-              <div className="col col-sm-4 col-md-4 col-xl-4 col-xl-4">
+              <div className="col col-sm-4 col-md-4 col-xl-4 col-lg-4">
                 <div className="pt-5 mt-5">
                   <p className="pt-5" ></p>
                   <a href="/" style={{fontSize:"35px"}} className=" text-danger  nav-item nav-link text-dark pr-5 font-weight-bold text-center" >Home</a>
